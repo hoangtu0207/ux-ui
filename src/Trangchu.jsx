@@ -1,6 +1,6 @@
 export default function Trangchu() {
 	return (
-		<div>
+		<div className="h-full">
 			<div className="bg-blue-100 flex flex-col w-full justify-center items-center h-60">
 				<span className="font-bold text-xl py-5">
 					Chao mung ban den voi LingGo!!!
