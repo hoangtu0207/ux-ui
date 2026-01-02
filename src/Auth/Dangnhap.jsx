@@ -5,42 +5,87 @@ export default function Dangnhap() {
 	return (
 		<div className="">
 			<Header />
-			<div className="h-screen flex flex-col items-center justify-center bg-blue-100">
-				<div className="bg-white w-80 h-80">
-					<h1 className="text-2xl text-center py-2">Dang nhap</h1>
-					<div className="flex">
-						<img
-							className="w-25 pl-3 object-contain"
-							src="logo.png"
-							alt=""
-						/>
-						<div className="mt-2 flex flex-col pl-4 space-y-3 mx-auto">
-							<label htmlFor="email">
-								<input
-									name="email"
-									type="text"
-									placeholder="Taikhoan"
-								/>
-							</label>
-							<label htmlFor="password">
-								<input
-									name="password"
-									type="password"
-									placeholder="******"
-								/>
-							</label>
-							<button className="bg-blue-400 rounded-full border-2 border-gray-500 w-30 mx-auto">
-								Dang nhap
-							</button>
-							<div className="flex  font-normal text-xs space-x-3 pt-5">
-								<a href="#">Dang ky tai khoan</a>
-								<a href="#">Quen mat khau?</a>
+				<form
+					// {...store.form()}
+					// resetOnSuccess={["password"]}
+					className="flex flex-col gap-6"
+				>
+						<>
+							<div className="grid gap-6">
+								<div className="grid gap-2">
+									<label htmlFor="email">Email address</label>
+									<input
+										id="email"
+										type="email"
+										name="email"
+										required
+										autoFocus
+										tabIndex={1}
+										autoComplete="email"
+										placeholder="email@example.com"
+									/>
+								</div>
+
+								<div className="grid gap-2">
+									<div className="flex items-center">
+										<label htmlFor="password">
+											Password
+										</label>
+									</div>
+									<input
+										id="password"
+										type="password"
+										name="password"
+										required
+										tabIndex={2}
+										autoComplete="current-password"
+										placeholder="Password"
+									/>
+									{/* <InputError message={errors.password} /> */}
+								</div>
+
+								<div className="flex items-center space-x-3">
+									<checkbox
+										id="remember"
+										name="remember"
+										tabIndex={3}
+									/>
+									<label htmlFor="remember">
+										Remember me
+									</label>
+								</div>
+
+								<button
+									type="submit"
+									className="mt-4 w-full"
+								>
+									Log in
+								</button>
 							</div>
-						</div>
+
+							{/* {canRegister && (
+								<div className="text-center text-sm text-muted-foreground">
+									Don't have an account?{" "}
+									<TextLink
+										href={register()}
+										tabIndex={5}
+									>
+										Sign up
+									</TextLink>
+								</div>
+							)} */}
+						</>
+
+				</form>
+
+				{/* {status && (
+					<div className="mb-4 text-center text-sm font-medium text-green-600">
+						{status}
 					</div>
-				</div>
-			</div>
-			<Footer />
+				)} */}
+			{/* </AuthLayout>
+			); }
+			<Footer /> */}
 		</div>
 	);
 }
