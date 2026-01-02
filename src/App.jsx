@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Dangnhap from "./Auth/Dangnhap";
+import Dangky from "./Auth/Dangky";
 
 function App() {
 	return (
@@ -12,6 +13,10 @@ function App() {
 			<Route
 				path="/dangnhap"
 				element={<Dangnhap />}
+			/>
+			<Route
+				path="/dangky"
+				element={<Dangky />}
 			/>
 		</Routes>
 	);
